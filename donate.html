@@ -1,0 +1,331 @@
+s<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Hope Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-hands-helping"></i>
+                <span>Hope Foundation</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Make a Donation</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Donate
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Intro -->
+    <section class="donation-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Your Generosity Changes Lives</h2>
+                <p>Every contribution, no matter how small, makes a significant difference in the lives of those we serve. Your donation helps us continue our mission of creating sustainable change in communities across India.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Options -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-wrapper">
+                <!-- Donation Form -->
+                <div class="donation-form-container">
+                    <h3>Choose Your Contribution</h3>
+                    
+                    <!-- Donation Type -->
+                    <div class="donation-type-selector">
+                        <button class="type-btn active" data-type="one-time">One-Time Donation</button>
+                        <button class="type-btn" data-type="monthly">Monthly Donation</button>
+                    </div>
+
+                    <!-- Cause Selection -->
+                    <div class="form-group">
+                        <label>Select a Cause</label>
+                        <select id="helpType" class="form-control">
+                            <option value="General Fund">Where Most Needed</option>
+                            <option value="Education">Children's Education</option>
+                            <option value="Healthcare">Healthcare Services</option>
+                            <option value="Women Empowerment">Women Empowerment</option>
+                            <option value="Clean Water">Clean Water Initiative</option>
+                            <option value="Food Security">Food Security Program</option>
+                            <option value="Emergency Relief">Emergency Relief Fund</option>
+                        </select>
+                    </div>
+
+                    <!-- Amount Selection -->
+                    <div class="form-group">
+                        <label>Select Amount (₹)</label>
+                        <div class="amount-grid">
+                            <button class="amount-btn" data-amount="500">₹500</button>
+                            <button class="amount-btn" data-amount="1000">₹1,000</button>
+                            <button class="amount-btn" data-amount="2500">₹2,500</button>
+                            <button class="amount-btn" data-amount="5000">₹5,000</button>
+                            <button class="amount-btn" data-amount="10000">₹10,000</button>
+                            <button class="amount-btn" data-amount="25000">₹25,000</button>
+                        </div>
+                        <div class="custom-amount-container">
+                            <input type="number" id="customAmount" class="form-control" placeholder="Enter custom amount" min="100">
+                        </div>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label>Personal Information</label>
+                        <div class="form-row">
+                            <input type="text" id="donorName" class="form-control" placeholder="Full Name *" required>
+                            <input type="email" id="donorEmail" class="form-control" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" id="donorPhone" class="form-control" placeholder="Phone Number *" required>
+                            <input type="text" id="donorPan" class="form-control" placeholder="PAN Number (for 80G receipt)">
+                        </div>
+                    </div>
+
+                    <!-- Address Information -->
+                    <div class="form-group">
+                        <label>Address (Optional - for receipt)</label>
+                        <textarea id="donorAddress" class="form-control" rows="3" placeholder="Complete Address"></textarea>
+                    </div>
+
+                    <!-- Anonymous Donation Option -->
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="anonymousDonation">
+                            <span>Make this donation anonymous</span>
+                        </label>
+                    </div>
+
+                    <!-- Dedication Option -->
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="dedicationCheck">
+                            <span>Dedicate this donation in honor/memory of someone</span>
+                        </label>
+                        <div id="dedicationFields" style="display: none;">
+                            <input type="text" class="form-control mt-2" placeholder="In honor/memory of..." id="dedicationName">
+                            <textarea class="form-control mt-2" rows="2" placeholder="Message (optional)" id="dedicationMessage"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Tax Benefits Info -->
+                    <div class="tax-info">
+                        <i class="fas fa-info-circle"></i>
+                        <p>All donations are eligible for 50% tax exemption under Section 80G of the Income Tax Act.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button id="donateBtn" class="btn btn-primary btn-block">
+                        <i class="fas fa-heart"></i> Proceed to Payment
+                    </button>
+
+                    <!-- Security Info -->
+                    <div class="security-info">
+                        <i class="fas fa-lock"></i>
+                        <span>Secure Payment via Razorpay</span>
+                    </div>
+                </div>
+
+                <!-- Donation Information -->
+                <div class="donation-info-container">
+                    <!-- Impact Cards -->
+                    <div class="impact-showcase">
+                        <h3>Your Impact</h3>
+                        <div class="impact-items">
+                            <div class="impact-item">
+                                <div class="amount">₹500</div>
+                                <div class="description">Provides educational supplies for 5 children for a month</div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="amount">₹1,000</div>
+                                <div class="description">Feeds a family of four for two weeks</div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="amount">₹2,500</div>
+                                <div class="description">Provides medical care for 10 patients</div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="amount">₹5,000</div>
+                                <div class="description">Sponsors a child's education for 3 months</div>
+                            </div>
+                            <div class="impact-item">
+                                <div class="amount">₹10,000</div>
+                                <div class="description">Installs a water purifier in a rural school</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Why Donate -->
+                    <div class="why-donate">
+                        <h3>Why Donate to Hope Foundation?</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> 100% Secure & Transparent</li>
+                            <li><i class="fas fa-check-circle"></i> 80G Tax Benefits Available</li>
+                            <li><i class="fas fa-check-circle"></i> Regular Impact Reports</li>
+                            <li><i class="fas fa-check-circle"></i> Low Administrative Costs</li>
+                            <li><i class="fas fa-check-circle"></i> Direct Community Impact</li>
+                        </ul>
+                    </div>
+
+                    <!-- Other Ways to Help -->
+                    <div class="other-ways">
+                        <h3>Other Ways to Support</h3>
+                        <div class="support-options">
+                            <a href="contact.html" class="support-option">
+                                <i class="fas fa-hands-helping"></i>
+                                <span>Volunteer</span>
+                            </a>
+                            <a href="#" class="support-option">
+                                <i class="fas fa-gift"></i>
+                                <span>In-Kind Donation</span>
+                            </a>
+                            <a href="#" class="support-option">
+                                <i class="fas fa-building"></i>
+                                <span>Corporate Partnership</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact for Help -->
+                    <div class="donation-help">
+                        <h4>Need Help?</h4>
+                        <p>Contact our donation support team</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> donate@hopefoundation.org</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Transfer Option -->
+    <section class="bank-transfer-section">
+        <div class="container">
+            <div class="bank-transfer-info">
+                <h3>Direct Bank Transfer</h3>
+                <p>You can also make a direct bank transfer using the following details:</p>
+                <div class="bank-details">
+                    <div class="detail-row">
+                        <span class="label">Account Name:</span>
+                        <span class="value">Hope Foundation Trust</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Account Number:</span>
+                        <span class="value">1234567890123456</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Bank Name:</span>
+                        <span class="value">State Bank of India</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">IFSC Code:</span>
+                        <span class="value">SBIN0001234</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Branch:</span>
+                        <span class="value">Mumbai Main Branch</span>
+                    </div>
+                </div>
+                <p class="note">Please email your transaction details to donate@hopefoundation.org for receipt generation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank You for Your Generosity!</h2>
+            <p>Your donation has been successfully processed.</p>
+            <p class="transaction-id"></p>
+            <p>A receipt has been sent to your email address.</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-hands-helping"></i> Hope Foundation</h3>
+                    <p>Making the world a better place, one step at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="project.html">Our Projects</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="donate.html">Donate Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Causes</h4>
+                    <ul>
+                        <li><a href="project.html">Education</a></li>
+                        <li><a href="project.html">Healthcare</a></li>
+                        <li><a href="project.html">Women Empowerment</a></li>
+                        <li><a href="project.html">Child Welfare</a></li>
+                        <li><a href="project.html">Environment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our activities</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="mt-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@hopefoundation.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hope Foundation. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

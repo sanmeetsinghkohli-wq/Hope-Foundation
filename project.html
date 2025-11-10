@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Hope Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-hands-helping"></i>
+                <span>Hope Foundation</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Projects</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Projects
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="empowerment">Empowerment</button>
+                <button class="filter-btn" data-filter="environment">Environment</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ongoing Projects -->
+    <section class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Ongoing Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="education ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600" alt="Digital Classroom">
+                        <span class="project-status ongoing">Ongoing</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Education</span>
+                        <h3>Digital Classroom Initiative</h3>
+                        <p>Providing digital learning tools and internet connectivity to 50 rural schools, benefiting over 5,000 students.</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Maharashtra, Gujarat</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>5,000+ Beneficiaries</span>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-sm">Support This Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="healthcare ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600" alt="Mobile Health Camps">
+                        <span class="project-status ongoing">Ongoing</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Healthcare</span>
+                        <h3>Mobile Health Camps</h3>
+                        <p>Regular health camps in remote villages providing free medical consultation, medicines, and health education.</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rajasthan, Bihar</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>10,000+ Beneficiaries</span>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-sm">Support This Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="empowerment ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1593113616828-6f22bca04804?w=600" alt="Women Skill Development">
+                        <span class="project-status ongoing">Ongoing</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Women Empowerment</span>
+                        <h3>Skill Development Program</h3>
+                        <p>Training women in tailoring, handicrafts, and digital skills for economic independence.</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Uttar Pradesh</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>500+ Women Trained</span>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-sm">Support This Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="environment ongoing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600" alt="Tree Plantation">
+                        <span class="project-status ongoing">Ongoing</span>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Environment</span>
+                        <h3>Green Earth Initiative</h3>
+                        <p>Large-scale tree plantation drive aiming to plant 100,000 trees and create urban forests.</p>
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Pan India</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-tree"></i>
+                                <span>45,000 Trees Planted</span>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-sm">Support This Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects -->
+    <section class="projects-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Completed Projects</h2>
+            <div class="completed-projects-grid">
+                <!-- Completed Project 1 -->
+                <div class="completed-project" data-category="education completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400" alt="School Building">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Rural School Construction</h3>
+                        <p>Built 5 schools in remote villages of Madhya Pradesh</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-users"></i> 1,500 Students</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Project 2 -->
+                <div class="completed-project" data-category="healthcare completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=400" alt="Water Project">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Clean Water Initiative</h3>
+                        <p>Installed water purification systems in 20 villages</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-users"></i> 10,000 People</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Project 3 -->
+                <div class="completed-project" data-category="healthcare completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400" alt="COVID Relief">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>COVID-19 Relief Program</h3>
+                        <p>Distributed medical supplies and food to affected families</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> 2020-2021</span>
+                            <span><i class="fas fa-users"></i> 50,000 Families</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Project 4 -->
+                <div class="completed-project" data-category="empowerment completed">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400" alt="Youth Training">
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Youth Employment Program</h3>
+                        <p>Vocational training for unemployed youth</p>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-users"></i> 2,000 Youth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="section-title">Our Total Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p>Students Educated</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3 class="counter" data-target="50000">0</h3>
+                    <p>Medical Treatments</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-home"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Homes Built</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 class="counter" data-target="3000">0</h3>
+                    <p>Jobs Created</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-hands-helping"></i> Hope Foundation</h3>
+                    <p>Making the world a better place, one step at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="project.html">Our Projects</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="donate.html">Donate Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Causes</h4>
+                    <ul>
+                        <li><a href="project.html">Education</a></li>
+                        <li><a href="project.html">Healthcare</a></li>
+                        <li><a href="project.html">Women Empowerment</a></li>
+                        <li><a href="project.html">Child Welfare</a></li>
+                        <li><a href="project.html">Environment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on our activities</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="mt-3"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@hopefoundation.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hope Foundation. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
