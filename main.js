@@ -147,7 +147,7 @@ if (contactForm) {
         e.preventDefault();
 
         // Initialize EmailJS with your public key
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+        emailjs.init('kHVMw7DLTwq42EcNQ'); // Replace with your actual public key
 
         const formData = {
             from_name: document.getElementById('contactName').value,
@@ -185,7 +185,7 @@ if (volunteerForm) {
         };
 
         // Initialize EmailJS with your public key
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+        emailjs.init('kHVMw7DLTwq42EcNQ'); // Replace with your actual public key
 
         // Send email using EmailJS
         emailjs.send('service_vg5qa5p', 'template_ig3use8', formData)
